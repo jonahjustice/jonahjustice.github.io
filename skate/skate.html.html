@@ -1,0 +1,88 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/if.css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<h1>Some Memorable Movies</h1>
+	<h3><span class="ital">Skate (</span> (Jonah Justice, 2022)</h3>
+	<div class="sidebySide">
+	<img class="filmStill" onClick="onClick_DTRT_img01()" src="images/skate1.JPG" alt="skate">
+	<img class="filmStill" onClick="onClick_DTRT_img02()" src="images/skate2.JPG" alt="skate">
+	<img class="filmStill" onClick="onClick_DTRT_img03()" src="images/skate3.JPG" alt="skate">
+	</div> 
+	<p class="filmInfo" id="DTRT_text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus adipisci, dolorum voluptates eos architecto eius molestiae at cupiditate fuga, fugit dignissimos eveniet rerum cum eaque nobis ut nemo, consectetur ad quidem iure laborum! Officiis tenetur, sit impedit harum animi eaque eos odit velit quasi officia dolorum repudiandae quod dolorem ullam?</p>
+	
+	<button type="button" onClick="gotoMovie()" id="gotoMovie_btn">Go to the movie </button>	
+	
+<div class="sidebySide">
+	
+</div>
+	
+	
+</body>
+	<script>
+		
+	// DO THE RIGHT THING SECTION******************************
+		var gotoMovie_btn = document.getElementById("gotoMovie_btn");
+		gotoMovie_btn.style.visibility = "hidden";
+		
+var img01_clicked =false;
+var img02_clicked =false
+var img_03clicked =false
+		
+function gotoMovie(){
+	window.open("https://youtu.be/RJ1aDT-h7Ws", "_blank");
+}
+
+	var DTRT_text=document.getElementById("DTRT_text")
+	DTRT_text.innerHTML="Skate was a film I made showcasing my hometown skatepark. This film was made as a personal for my very first film class. I made it to show everyone just how memorable this place was for me and where I spent most of my free time in high school.";
+		
+	var DTRT01= "This is Vostin, my best friend. He used to be better than me at skating, but I stuck with it longer than him and eventually gapped him. He and I used to skate a lot together. I remember countless nights where we would bring a giant work light to the skatepark and skate all night long. "
+	
+	
+		
+	function onClick_DTRT_img01 () {
+		DTRT_text.innerHTML= DTRT01;
+		img01_clicked=true;
+		console.log("img01_clicked= "+img01_clicked);
+		revealButton();
+	}
+	var DTRT02= "This scene was just a long shot of the skatepark to show its simplicity. It was just some old, run-down skatepark in the middle of Wisconsin. Even to the skater's eye, this park doesn't look like anything special, however, we loved this park. We spent so much time here making friends and memories."
+	
+	DTRT_text.innerHTML= DTRT02;
+	function onClick_DTRT_img02 () {
+		img02_clicked=true;
+		console.log("img02_clicked = "+img02_clicked);
+		revealButton()
+		DTRT_text.innerHTML= "This scene was just a long shot of the skatepark to show its simplicity. It was just some old, run-down skatepark in the middle of Wisconsin. Even to the skater's eye, this park doesn't look like anything special, however, we loved this park. We spent so much time here making friends and memories."
+	}
+		
+		var DTRT03= "This scene I decided to include to show the park's diversity. A little kid can be seen sliding down one of the ramps as if the park is a play-place. Diversity was a big thing at the park. For example, people used to come and do parkour here. We always embraced it though because they were simply having fun, just like we were. Some of the best people that I've met at that park weren't even skaters. This one guy, Brian, who I ONLY see at the park, came one day and just asked me to play hacky sack with him. My friends and I ended up talking to him for the rest of the day and from that point on, Brian was our hacky sack friend at the skatepark."
+		
+		DTRT_text.innerHTML= DTRT03;
+		function onClick_DTRT_img03 () {
+			img_03clicked=true;
+			console.log("img_03clicked = "+img_03clicked);
+			revealButton();
+			DTRT_text.innerHTML="This scene I decided to include to show the park's diversity. A little kid can be seen sliding down one of the ramps as if the park is a play-place. Diversity was a big thing at the park. For example, people used to come and do parkour here. We always embraced it though because they were simply having fun, just like we were. Some of the best people that I've met at that park weren't even skaters. This one guy, Brian, who I ONLY see at the park, came one day and just asked me to play hacky sack with him. My friends and I ended up talking to him for the rest of the day and from that point on, Brian was our hacky sack friend at the skatepark."
+		}
+		
+		// INTERSTELLAR SECTION *********************************************************************
+		
+		
+		
+function revealButton(){
+	if (img01_clicked && img02_clicked && img_03clicked){
+		console.log("REVEAL BUTTON");
+		gotoMovie_btn.style.visibility = "visible";
+	}
+}
+
+	</script>
+	
+
+</html>

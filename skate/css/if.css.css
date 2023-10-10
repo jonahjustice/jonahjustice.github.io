@@ -1,0 +1,18 @@
+@charset "utf-8";
+.ital {
+    text-decoration: overline;
+    font-style: italic;
+}
+.filmStill {
+    border-style: solid;
+    width: 400px;
+}
+.filmInfo {
+    min-width: 1200px;
+    border-style: solid;
+    max-width: 1200px;
+}
+
+.sidebySide {
+    display: flex;
+}
