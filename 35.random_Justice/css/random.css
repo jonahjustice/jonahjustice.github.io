@@ -1,0 +1,8 @@
+@charset "utf-8";
+.idk {
+    width: 400px;
+    border-style: solid;
+}
+.sidebyside {
+    display: flex;
+}
