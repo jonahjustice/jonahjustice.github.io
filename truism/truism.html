@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/truism.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div>
+      <video id="displayed_video" preload="auto" muted="muted" autoplay="autoplay" loop="loop" >
+        <source src="video/bad_kickflip.mp4" type="video/mp4">
+      </video>
+    </div>
+	
+	
+	<div class="centered_text">
+	<h1 id="truism" onmouseover="onTruismText()" onMouseOut="outTruismText()" onClick="changeVideo()">REPETITION IS THE BEST WAY TO LEARN</h1>
+	
+	
+	</div>
+	
+	<script>
+	
+	var channel = 1;
+	var pausedAt = 0;
+		
+	function onTruismText(){
+		console.log("clicked truism text");
+		document.getElementById("displayed_video").style.filter = "grayscale(100%)";
+	}
+		
+	function outTruismText(){
+		console.log("moving out of truism text");
+		document.getElementById("displayed_video").style.filter = "grayscale(0%)";
+	}
+	
+	function changeVideo(){
+		console.log("will change video");
+		pausedAt = displayed_video.currentTime;
+		if (channel == 0){
+			displayed_video.src=kickflip;
+			displayed_video.currentTime = pausedAt;
+			channel = 1;
+		}
+		else{
+			displayed_video.src=vid2;
+			displayed_video.currentTime = pausedAt;
+			channel = 0;
+			}
+		
+		mySound.play();
+		
+	}
+		
+		
+	//reference to video element
+		var displayed_video= document.getElementById("displayed_video");
+		
+		
+	// references to videos
+		var kickflip="video/bad_kickflip.mp4";
+		var vid2="video/vid2.mp4";
+	
+	///// stuff for sound
+		
+		var mySound = new Audio("sounds/song.mp3");
+	
+	</script>
+	
+	
+</body>
+</html>
