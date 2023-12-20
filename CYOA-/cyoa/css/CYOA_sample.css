@@ -1,0 +1,38 @@
+@charset "utf-8";
+.h1{
+	position: relative;
+    text-align: center;
+	justify-content:center;
+    text-decoration: underline;
+font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    color: #FFFFFF;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 900;
+    font-size: 40pt;}
+
+
+
+.vidCenter {
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+#title_text {
+    width: 0px;
+    height: 0px;
+    color: #8B8B8B;
+}
+#displayedVideo {
+ 
+}
+
+#title {
+    margin-top: 50vh;
+}
+.sideBySide {
+    display: flex;
+}
+.filmStill {
+    width: 500px;
+}
