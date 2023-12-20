@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Photography Trip</title>
+<link href="css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- THE TITLE ABOVE THE VIDEO -->
+
+<h1>THIRD WARD OR BRADFORD BEACH? </h1>
+
+<!-- THE VIDEO -->
+
+<div class = "vidCenter">    
+
+</div>
+
+<!-- THE CAPTION or PARAGRAPH UNDERNEATH THE VIDEO -->
+<!-- this appears when the video reaches its end -->
+
+<p id="caption">
+
+</p>
+	
+	<div class="sideBySide">
+	<img class="filmStill" src="images/thirdward.jpg" alt="location>">
+	<img class="filmStill" src="images/bradford.jpg" alt="location">
+		 
+	
+	
+	</div>
+	
+
+<!-- THE TWO BUTTONS UNDERNEATH THE CAPTION - CAN EASILY ADD MORE BUTTONS -->
+<!-- these appear when the video reaches its end -->
+
+<div id="DIVforButtons">
+<p>
+<button id="topBTN" onClick="buttonOne()">Third Ward</button>  
+</p>    
+<p>
+<button id="bottomBTN" onClick="buttonTwo()">Bradford Beach</button>    
+</p>
+</div>
+
+<script>
+
+    document.getElementById('displayedVideo').addEventListener('ended',whenVideoEnds,false);
+        
+    var topBTN = document.getElementById("topBTN");
+    var bottomBTN = document.getElementById("bottomBTN"); 
+   
+    var caption = document.getElementById("caption");    
+
+    caption.style.display = 'none';    
+    topBTN.style.display = 'none';
+    bottomBTN.style.display = 'none';        
+
+    function whenVideoEnds(e) {
+		// these three commands make the caption and the 2 buttons visible
+        caption.style.display = 'block';    
+        topBTN.style.display = 'block';
+        bottomBTN.style.display = 'block';
+    }
+        
+		// MAKE SURE THE WINDOW OPENS THE FILE NAME on YOUR DIRECTORY 
+		// Lines 63 and 64 are the only places you have to make a change
+    function buttonOne() {
+		window.open('scene7.html','_self', false)
+		
+		//window.open ('scene1_1.html','_self',false)
+		//once you make the next HTML file, put it in line 65 and uncomment that line
+		//MAKE SURE TO COMMENT OUT or REMOVE the alerts
+    }
+        
+    function buttonTwo() {
+		window.open('scene6.html','_self', false)
+        //window.open ('scene1_2.html','_self',false)
+		//once you make the next HTML file, put it in line 72 and uncomment that line
+		//MAKE SURE TO COMMENT OUT or REMOVE the alerts
+    }    
+	
+</script>
+    
+</body>
+</html>
